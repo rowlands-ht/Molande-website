@@ -1,0 +1,6 @@
+<app-chrome />
+<app-navbar />
+<main id="main" [@routeAnim]="key(outlet)">
+  <router-outlet #outlet="outlet" />
+</main>
+<app-footer />
