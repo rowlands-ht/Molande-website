@@ -21,10 +21,10 @@ export const img = (id: string, w = 900) =>
 
 /** Put your files in public/img/ and keep these file names (or rename them here). */
 export const IMG = {
-  site: '/img/con1.jpeg',     crane: '/img/con5.jpeg',
-  frame: '/img/con2.jpeg',   tower: '/img/con6.jpeg',
-  crew: '/img/con3.jpeg',     house: '/img/con7.jpeg',
-  house2: '/img/con4.jpeg', kitchen: '/img/con8.webp',
+  site: '/img/bg0.jpeg',     crane: '/img/bg4.jpeg',
+  frame: '/img/bg1.jpeg',   tower: '/img/con6.jpeg',
+  crew: '/img/bg2.jpg',     house: '/img/bg5.jpeg',
+  house2: '/img/bg3.jpeg', kitchen: '/img/con8.webp',
 };
 
 export interface Service { slug: string; title: string; icon: string; short: string; features: string[]; }
