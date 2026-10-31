@@ -195,13 +195,13 @@ p { margin: 0 0 1em; }
 }
 
 
-// /* Compact landing page on phones */
-// @media (max-width: 720px) {
-//   .hide-sm { display: none !important; }
-// //   .section { padding: 44px 0; }
-// //   .sh { margin-bottom: 1.5rem; }
-//   .sh__sub { display: none; }      /* drop the intro paragraphs under headings */
-//   .hero__sub { display: none; }
-//   .hero__cta .btn--ghost { display: none; }   /* keep just "Get a Quote" */
-//   .hero__crane, .scroll-hint { display: none; }
-// }
+/* Compact landing page on phones */
+@media (max-width: 720px) {
+  .hide-sm { display: none !important; }
+  .section { padding: 44px 0; }
+  .sh { margin-bottom: 1.5rem; }
+  .sh__sub { display: none; }      /* drop the intro paragraphs under headings */
+  .hero__sub { display: none; }
+  .hero__cta .btn--ghost { display: none; }   /* keep just "Get a Quote" */
+  .hero__crane, .scroll-hint { display: none; }
+}

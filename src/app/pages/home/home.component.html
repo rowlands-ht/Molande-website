@@ -2,7 +2,7 @@
 <section class="hero">
   <div class="hero__slides" aria-hidden="true">
     @for (s of slides; track s; let i = $index) {
-      <div class="hero__slide" [style.background-image]="'url(' + s + ')'" [style.animation-delay.s]="i * 6"></div>
+    <div class="hero__slide" [style.background-image]="'url(' + s + ')'" [style.animation-delay.s]="i * 6"></div>
     }
   </div>
   <div class="hero__shade"></div><div class="blueprint blueprint--hero"></div>
@@ -11,7 +11,7 @@
     <p class="eyebrow eyebrow--light">Harare · Zimbabwe</p>
     <h1 class="hero__title" [attr.aria-label]="'Building Zimbabwe’s future, solidly.'">
       @for (w of headline; track $index; let i = $index) {
-        <span class="word-wrap" aria-hidden="true"><span class="word" [style.animation-delay.ms]="350 + i * 120">{{ w }}</span></span>
+      <span class="word-wrap" aria-hidden="true"><span class="word" [style.animation-delay.ms]="350 + i * 120">{{ w }}</span></span>
       }
     </h1>
     <p class="hero__sub">From foundations to finishing touches, MOLANDE delivers residential, commercial and civil projects with craftsmanship you can trust.</p>
@@ -27,54 +27,54 @@
 <section class="stats">
   <div class="container stats__grid">
     <app-counter [end]="120" label="Projects Completed" />
-    <app-counter [end]="12" label="Years of Experience" />
-    <app-counter [end]="95" suffix="+" label="Happy Clients" />
+    <app-counter [end]="6" label="Years of Experience" />
+    <app-counter [end]="80" suffix="+" label="Happy Clients" />
     <app-counter [end]="48" label="Team Members" />
   </div>
 </section>
 
-<!-- SERVICES -->
+<!-- SERVICES (phones: first 4 only) -->
 <section class="section">
   <div class="container">
     <app-section-heading eyebrow="What we do" title="Construction services built around you" sub="Ten specialist services under one roof, so your project stays under one accountable team." />
     <div class="grid grid--3">
       @for (s of services; track s.slug; let i = $index) {
-        <app-service-card [s]="s" appRevealOnScroll="up" [revealDelay]="i * 80" />
+      <app-service-card [s]="s" appRevealOnScroll="up" [revealDelay]="i * 80" [class.hide-sm]="i > 3" />
       }
     </div>
     <p class="center"><a routerLink="/services" class="btn btn--dark" appMagnetic>All services</a></p>
   </div>
 </section>
 
-<!-- WHY -->
-<section class="section section--dark blueprint">
+<!-- WHY (hidden on phones) -->
+<section class="section section--dark blueprint hide-sm">
   <div class="container">
     <app-section-heading eyebrow="Why choose MOLANDE" title="Strong foundations. Honest dealings." />
     <div class="grid grid--4">
       @for (w of why; track w.t; let i = $index) {
-        <div class="why" appRevealOnScroll="zoom" [revealDelay]="i * 100">
-          <span class="why__i" aria-hidden="true">{{ w.i }}</span><h3>{{ w.t }}</h3><p>{{ w.d }}</p>
-        </div>
+      <div class="why" appRevealOnScroll="zoom" [revealDelay]="i * 100">
+        <span class="why__i" aria-hidden="true">{{ w.i }}</span><h3>{{ w.t }}</h3><p>{{ w.d }}</p>
+      </div>
       }
     </div>
   </div>
 </section>
 
-<!-- FEATURED PROJECTS -->
+<!-- FEATURED PROJECTS (phones: first 3 only) -->
 <section class="section">
   <div class="container">
     <app-section-heading eyebrow="Our work" title="Featured projects across Harare" />
     <div class="grid grid--3">
       @for (p of featured; track p.title; let i = $index) {
-        <div appRevealOnScroll="up" [revealDelay]="i * 70"><app-project-card [p]="p" (open)="null" /></div>
+      <div appRevealOnScroll="up" [revealDelay]="i * 70" [class.hide-sm]="i > 2"><app-project-card [p]="p" (open)="null" /></div>
       }
     </div>
     <p class="center"><a routerLink="/projects" class="btn btn--primary" appMagnetic>See full portfolio</a></p>
   </div>
 </section>
 
-<!-- BEFORE / AFTER -->
-<section class="section section--alt">
+<!-- BEFORE / AFTER (hidden on phones) -->
+<section class="section section--alt hide-sm">
   <div class="container split">
     <div appRevealOnScroll="left">
       <p class="eyebrow">Renovations</p>
@@ -86,14 +86,14 @@
   </div>
 </section>
 
-<!-- PROCESS -->
-<section class="section process">
+<!-- PROCESS (hidden on phones) -->
+<section class="section process hide-sm">
   <div class="container">
     <app-section-heading eyebrow="How we work" title="From first call to handover" />
     <div class="process__track"><div class="process__line"></div>
       <ol class="process__steps">
         @for (s of steps; track s.t; let i = $index) {
-          <li class="step"><span class="step__n">{{ i + 1 }}</span><h3>{{ s.t }}</h3><p>{{ s.d }}</p></li>
+        <li class="step"><span class="step__n">{{ i + 1 }}</span><h3>{{ s.t }}</h3><p>{{ s.d }}</p></li>
         }
       </ol>
     </div>
@@ -108,15 +108,16 @@
   </div>
 </section>
 
-<section class="section">
+<!-- FAQ (hidden on phones) -->
+<section class="section hide-sm">
   <div class="container narrow">
     <app-section-heading eyebrow="FAQ" title="Questions we hear most" />
     <app-faq />
   </div>
 </section>
 
-<!-- PARTNERS MARQUEE -->
-<section class="marquee" aria-label="Clients and partners">
+<!-- PARTNERS MARQUEE (hidden on phones) -->
+<section class="marquee hide-sm" aria-label="Clients and partners">
   <div class="marquee__track">
     @for (p of partners; track $index) { <span>{{ p }}</span> }
   </div>
