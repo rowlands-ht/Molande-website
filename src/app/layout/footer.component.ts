@@ -39,6 +39,7 @@ import { CONTACT, SERVICES } from '../core/data/site-data';
     </div>
     <div class="container map"><iframe title="MOLANDE office location in Harare" [src]="map" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
     <div class="footer__bar container">© {{ year }} MOLANDE Construction. All rights reserved.</div>
+
   </footer>`,
 })
 export class FooterComponent {

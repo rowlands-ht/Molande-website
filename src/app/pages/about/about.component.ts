@@ -14,7 +14,7 @@ import { CounterComponent } from '../../shared/components/counter.component';
     <img appRevealOnScroll="left" class="rounded-img" [src]="photo" alt="MOLANDE crew on site in Harare" loading="lazy">
     <div appRevealOnScroll="right">
       <p class="eyebrow">Our story</p><h2>Craftsmanship with integrity</h2>
-      <p>MOLANDE Construction is a Harare-based contractor delivering homes, commercial premises and civil works. Replace this with your real company story, founding year and values.</p>
+      <p>MOLANDE Construction is a Harare-based contractor delivering homes, commercial premises and civil works. </p>
       <p>Our promise is simple: honest quotes, skilled people and finished work we are proud to put our name on.</p>
     </div>
   </div></section>
@@ -30,7 +30,7 @@ import { CounterComponent } from '../../shared/components/counter.component';
   <section class="section"><div class="container"><app-section-heading eyebrow="Leadership" title="The team behind the work" />
     <div class="grid grid--3">
       @for (m of team; track m.name; let i = $index) {
-        <div class="member" appRevealOnScroll [revealDelay]="i * 100"><img [src]="m.photo" [alt]="m.name" width="160" height="160" loading="lazy"><h3>{{ m.name }}</h3><p>{{ m.role }}</p></div>
+        <div class="member" appRevealOnScroll [revealDelay]="i * 100"><p>{{m.fname}}</p><h3>{{ m.name }}</h3><p>{{ m.role }}</p></div>
       }
     </div>
     <p class="center"><a routerLink="/contact" class="btn btn--primary">Work with us</a></p>
@@ -39,9 +39,9 @@ import { CounterComponent } from '../../shared/components/counter.component';
 export class AboutComponent {
   photo = img(IMG.crew, 900);
   team = [
-    { name: 'Managing Director', role: 'Founder', photo: 'https://i.pravatar.cc/160?img=15' },
-    { name: 'Head of Projects', role: 'Civil Engineer', photo: 'https://i.pravatar.cc/160?img=5' },
-    { name: 'Chief Quantity Surveyor', role: 'Costing & Contracts', photo: 'https://i.pravatar.cc/160?img=52' },
+    { name: 'Managing Director', role: 'Founder', fname: 'Promise' },
+    { name: 'Head of Projects', role: 'Civil Engineer', fname: 'Takudzwa' },
+    { name: 'Chief Quantity Surveyor', role: 'Costing & Contracts', fname: 'Nokutenda' },
   ];
   constructor() { inject(SeoService).set('About Us', 'Meet MOLANDE Construction, a Harare building contractor focused on quality, safety and integrity.'); }
 }

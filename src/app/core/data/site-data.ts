@@ -4,8 +4,8 @@ export const BRAND = { name: 'MOLANDE', tagline: "Building Zimbabwe's Future, So
 export const CONTACT = {
   phoneDisplay: '+263 714 832 480',
   phoneTel: '+263714832480',
-  whatsapp: '263714832480',          // wa.me format, no "+"
-  email: 'info@molande.co.zw',       // PLACEHOLDER: replace with a real address
+  whatsapp: '263714832480',
+  email: 'htngaiso@gmail.com',
   address: 'Harare, Zimbabwe',
   hours: 'Mon–Fri 7:30–17:00 · Sat 8:00–13:00',
 };
@@ -29,16 +29,16 @@ export const IMG = {
 
 export interface Service { slug: string; title: string; icon: string; short: string; features: string[]; }
 export const SERVICES: Service[] = [
-  { slug: 'general-construction', title: 'General Construction', icon: '🏗️', short: 'End-to-end building works delivered on time and to specification.', features: ['Foundations to finishes', 'Council-approved plans', 'Quality-controlled materials'] },
-  { slug: 'residential-building', title: 'Residential Building', icon: '🏠', short: 'Family homes, cluster developments and townhouses built to last.', features: ['Custom and standard plans', 'Stage-by-stage payment plans', 'Warranty on workmanship'] },
-  { slug: 'commercial-construction', title: 'Commercial Construction', icon: '🏢', short: 'Offices, retail units, warehouses and industrial premises.', features: ['Fast-track programmes', 'Tenant fit-out coordination', 'Safety-first sites'] },
-  { slug: 'renovations-remodelling', title: 'Renovations & Remodelling', icon: '🔨', short: 'Breathe new life into existing homes and commercial spaces.', features: ['Extensions and conversions', 'Structural alterations', 'Minimal disruption'] },
-  { slug: 'kitchen-interior-fitouts', title: 'Kitchen & Interior Fit-outs', icon: '🍳', short: 'Built-in cupboards, kitchens, ceilings, tiling and finishes.', features: ['Made-to-measure joinery', 'Granite and quartz tops', 'Ceilings and partitions'] },
+  { slug: 'general-construction', title: 'General Construction', icon: '', short: 'End-to-end building works delivered on time and to specification.', features: ['Foundations to finishes', 'Council-approved plans', 'Quality-controlled materials'] },
+  { slug: 'residential-building', title: 'Residential Building', icon: '', short: 'Family homes, cluster developments and townhouses built to last.', features: ['Custom and standard plans', 'Stage-by-stage payment plans', 'Warranty on workmanship'] },
+  { slug: 'commercial-construction', title: 'Commercial Construction', icon: '', short: 'Offices, retail units, warehouses and industrial premises.', features: ['Fast-track programmes', 'Tenant fit-out coordination', 'Safety-first sites'] },
+  { slug: 'renovations-remodelling', title: 'Renovations & Remodelling', icon: '', short: 'Breathe new life into existing homes and commercial spaces.', features: ['Extensions and conversions', 'Structural alterations', 'Minimal disruption'] },
+  { slug: 'kitchen-interior-fitouts', title: 'Kitchen & Interior Fit-outs', icon: '', short: 'Built-in cupboards, kitchens, ceilings, tiling and finishes.', features: ['Made-to-measure joinery', 'Granite and quartz tops', 'Ceilings and partitions'] },
   { slug: 'roofing', title: 'Roofing', icon: '🛠️', short: 'New roofs, re-roofing, waterproofing and repairs.', features: ['IBR, tiles and trusses', 'Leak diagnosis and repair', 'Gutters and insulation'] },
-  { slug: 'plumbing-electrical', title: 'Plumbing & Electrical', icon: '⚡', short: 'Certified installations for new builds and upgrades.', features: ['Reticulation and DB boards', 'Solar and backup power ready', 'Compliance certificates'] },
+  { slug: 'plumbing-electrical', title: 'Plumbing & Electrical', icon: '', short: 'Certified installations for new builds and upgrades.', features: ['Reticulation and DB boards', 'Solar and backup power ready', 'Compliance certificates'] },
   { slug: 'civil-road-works', title: 'Civil & Road Works', icon: '🛣️', short: 'Roads, driveways, drainage, paving and site development.', features: ['Earthworks and grading', 'Stormwater drainage', 'Paving and kerbing'] },
-  { slug: 'project-management', title: 'Project Management', icon: '📋', short: 'Independent oversight of your budget, programme and quality.', features: ['Cost control and reporting', 'Contractor coordination', 'Snagging and handover'] },
-  { slug: 'architectural-design-planning', title: 'Architectural Design & Planning', icon: '📐', short: 'Concept sketches to council-ready drawings and BOQs.', features: ['3D concepts', 'Council submissions', 'Bills of quantities'] },
+  { slug: 'project-management', title: 'Project Management', icon: '', short: 'Independent oversight of your budget, programme and quality.', features: ['Cost control and reporting', 'Contractor coordination', 'Snagging and handover'] },
+  { slug: 'architectural-design-planning', title: 'Architectural Design & Planning', icon: '', short: 'Concept sketches to council-ready drawings and BOQs.', features: ['3D concepts', 'Council submissions', 'Bills of quantities'] },
 ];
 
 export interface Project { title: string; category: 'Residential' | 'Commercial' | 'Renovation' | 'Civil'; location: string; year: number; image: string; }
@@ -55,10 +55,10 @@ export const PROJECTS: Project[] = [
 ];
 
 export const TESTIMONIALS = [
-  { name: 'Tendai Moyo', role: 'Homeowner, Borrowdale', rating: 5, photo: 'https://i.pravatar.cc/120?img=12', quote: 'MOLANDE delivered our home on schedule and the finishing is flawless. Communication was excellent from day one.' },
-  { name: 'Rudo Chikwanha', role: 'Director, Avondale Holdings', rating: 5, photo: 'https://i.pravatar.cc/120?img=47', quote: 'Professional, transparent and safety-conscious. Our office block was handed over exactly as promised.' },
-  { name: 'Farai Ndlovu', role: 'Landlord, Mount Pleasant', rating: 5, photo: 'https://i.pravatar.cc/120?img=33', quote: 'They transformed an ageing property into something we are proud of. Budget was respected throughout.' },
-  { name: 'Chipo Sibanda', role: 'Homeowner, Highlands', rating: 4, photo: 'https://i.pravatar.cc/120?img=45', quote: 'Beautiful kitchen and very tidy team. Would happily recommend to friends and family.' },
+  { name: 'Tendai Moyo', role: 'Homeowner, Borrowdale', rating: 5, photo: '', quote: 'MOLANDE delivered our home on schedule and the finishing is flawless. Communication was excellent from day one.' },
+  { name: 'Rudo Chikwanha', role: 'Director, Avondale Holdings', rating: 5, photo: '', quote: 'Professional, transparent and safety-conscious. Our office block was handed over exactly as promised.' },
+  { name: 'Farai Ndlovu', role: 'Landlord, Mount Pleasant', rating: 5, photo: '', quote: 'They transformed an ageing property into something we are proud of. Budget was respected throughout.' },
+  { name: 'Chipo Sibanda', role: 'Homeowner, Highlands', rating: 4, photo: '', quote: 'Beautiful kitchen and very tidy team. Would happily recommend to friends and family.' },
 ];
 
 export const POSTS = [

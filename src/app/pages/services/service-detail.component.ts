@@ -14,7 +14,7 @@ import { FaqComponent } from '../../shared/components/faq.component';
     <section class="section"><div class="container split">
       <div appRevealOnScroll="left">
         <h2>{{ s.short }}</h2>
-        <p>MOLANDE provides professional {{ s.title.toLowerCase() }} across Harare and surrounding areas. Replace this paragraph with detailed service copy, typical timelines and pricing guidance.</p>
+        <p>MOLANDE provides professional {{ s.title.toLowerCase() }} across Harare and surrounding areas. </p>
         <ul class="ticks">@for (f of s.features; track f) { <li>{{ f }}</li> }</ul>
         <a routerLink="/contact" class="btn btn--primary">Request a quote</a>
       </div>
