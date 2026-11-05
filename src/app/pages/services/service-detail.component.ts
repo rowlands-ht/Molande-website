@@ -1,6 +1,6 @@
 import { Component, computed, effect, inject, input } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { IMG, PROJECTS, SERVICES, STEPS, img } from '../../core/data/site-data';
+import { SERVICES, STEPS } from '../../core/data/site-data';
 import { SeoService } from '../../core/services/seo.service';
 import { RevealOnScrollDirective } from '../../shared/directives/reveal-on-scroll.directive';
 import { FaqComponent } from '../../shared/components/faq.component';
@@ -14,11 +14,11 @@ import { FaqComponent } from '../../shared/components/faq.component';
     <section class="section"><div class="container split">
       <div appRevealOnScroll="left">
         <h2>{{ s.short }}</h2>
-        <p>MOLANDE provides professional {{ s.title.toLowerCase() }} across Harare and surrounding areas. </p>
+        <p>MOLANDE provides professional {{ s.title.toLowerCase() }} across Harare and surrounding areas.</p>
         <ul class="ticks">@for (f of s.features; track f) { <li>{{ f }}</li> }</ul>
         <a routerLink="/contact" class="btn btn--primary">Request a quote</a>
       </div>
-      <img appRevealOnScroll="right" class="rounded-img" [src]="photo" [alt]="s.title + ' by MOLANDE'" loading="lazy">
+      <img appRevealOnScroll="right" class="rounded-img" [src]="s.image" [alt]="s.title + ' by MOLANDE'" loading="lazy" width="900" height="675">
     </div></section>
     <section class="section section--alt"><div class="container">
       <h2 class="center">How it works</h2>
@@ -33,7 +33,6 @@ export class ServiceDetailComponent {
   slug = input<string>();                       // bound from the route by withComponentInputBinding()
   svc = computed(() => SERVICES.find(s => s.slug === this.slug()));
   steps = STEPS;
-  photo = img(IMG.frame, 900);
   constructor() {
     const seo = inject(SeoService);
     effect(() => { const s = this.svc(); if (s) seo.set(s.title, `${s.short} Professional ${s.title.toLowerCase()} in Harare, Zimbabwe.`); });

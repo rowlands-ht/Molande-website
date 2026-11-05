@@ -7,7 +7,8 @@ import { ServiceCardComponent } from '../../shared/components/service-card.compo
 @Component({
   selector: 'app-services', standalone: true, imports: [ServiceCardComponent, RevealOnScrollDirective],
   template: `
-  <section class="page-hero blueprint"><div class="container"><p class="eyebrow eyebrow--light">Services</p><h1>Everything you need to build</h1></div></section>
+  <section class="page-hero blueprint"><div class="container"><p class="eyebrow eyebrow--light">Services</p>
+  <h1>Everything you need to build</h1></div></section>
   <section class="section"><div class="container grid grid--3">
     @for (s of services; track s.slug; let i = $index) { <app-service-card [s]="s" appRevealOnScroll [revealDelay]="(i % 3) * 90" /> }
   </div></section>`,

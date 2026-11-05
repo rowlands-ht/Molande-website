@@ -21,24 +21,28 @@ export const img = (id: string, w = 900) =>
 
 /** Put your files in public/img/ and keep these file names (or rename them here). */
 export const IMG = {
-  site: '/img/bg0.jpeg',     crane: '/img/bg4.jpeg',
-  frame: '/img/bg1.jpeg',   tower: '/img/con6.jpeg',
+  site: '/img/solar.jpeg',     crane: '/img/bg4.jpeg',
+  frame: '/img/roofing2.jpeg',   tower: '/img/con6.jpeg',
   crew: '/img/bg2.jpg',     house: '/img/bg5.jpeg',
-  house2: '/img/bg3.jpeg', kitchen: '/img/con8.webp',
+  house2: '/img/kitchen2.jpg', kitchen: '/img/kitchen.jpeg',
+  electricity: '/img/electricity.jpeg',solarize: '/img/solarize.jpeg',
+  plumbing: '/img/plumbing.jpeg',plumbingp: '/img/plumbing2.jpeg',
+  roofing: '/img/roofing2.jpeg',
+  kitchenp: '/img/kitchen2.jpeg',
 };
 
-export interface Service { slug: string; title: string; icon: string; short: string; features: string[]; }
+export interface Service { slug: string; title: string; icon: string; image: string; short: string; features: string[]; }
 export const SERVICES: Service[] = [
-  { slug: 'general-construction', title: 'General Construction', icon: '', short: 'End-to-end building works delivered on time and to specification.', features: ['Foundations to finishes', 'Council-approved plans', 'Quality-controlled materials'] },
-  { slug: 'residential-building', title: 'Residential Building', icon: '', short: 'Family homes, cluster developments and townhouses built to last.', features: ['Custom and standard plans', 'Stage-by-stage payment plans', 'Warranty on workmanship'] },
-  { slug: 'commercial-construction', title: 'Commercial Construction', icon: '', short: 'Offices, retail units, warehouses and industrial premises.', features: ['Fast-track programmes', 'Tenant fit-out coordination', 'Safety-first sites'] },
-  { slug: 'renovations-remodelling', title: 'Renovations & Remodelling', icon: '', short: 'Breathe new life into existing homes and commercial spaces.', features: ['Extensions and conversions', 'Structural alterations', 'Minimal disruption'] },
-  { slug: 'kitchen-interior-fitouts', title: 'Kitchen & Interior Fit-outs', icon: '', short: 'Built-in cupboards, kitchens, ceilings, tiling and finishes.', features: ['Made-to-measure joinery', 'Granite and quartz tops', 'Ceilings and partitions'] },
-  { slug: 'roofing', title: 'Roofing', icon: '🛠️', short: 'New roofs, re-roofing, waterproofing and repairs.', features: ['IBR, tiles and trusses', 'Leak diagnosis and repair', 'Gutters and insulation'] },
-  { slug: 'plumbing-electrical', title: 'Plumbing & Electrical', icon: '', short: 'Certified installations for new builds and upgrades.', features: ['Reticulation and DB boards', 'Solar and backup power ready', 'Compliance certificates'] },
-  { slug: 'civil-road-works', title: 'Civil & Road Works', icon: '🛣️', short: 'Roads, driveways, drainage, paving and site development.', features: ['Earthworks and grading', 'Stormwater drainage', 'Paving and kerbing'] },
-  { slug: 'project-management', title: 'Project Management', icon: '', short: 'Independent oversight of your budget, programme and quality.', features: ['Cost control and reporting', 'Contractor coordination', 'Snagging and handover'] },
-  { slug: 'architectural-design-planning', title: 'Architectural Design & Planning', icon: '', short: 'Concept sketches to council-ready drawings and BOQs.', features: ['3D concepts', 'Council submissions', 'Bills of quantities'] },
+  { slug: 'general-construction', title: 'General Construction', icon: '️', image: '/img/bg0.jpeg', short: 'End-to-end building works delivered on time and to specification.', features: ['Foundations to finishes', 'Council-approved plans', 'Quality-controlled materials'] },
+  { slug: 'residential-building', title: 'Residential Building', icon: '', image: '/img/con1.jpeg', short: 'Family homes, cluster developments and townhouses built to last.', features: ['Custom and standard plans', 'Stage-by-stage payment plans', 'Warranty on workmanship'] },
+  { slug: 'commercial-construction', title: 'Commercial Construction', icon: '', image: '/img/con1.jpeg', short: 'Offices, retail units, warehouses and industrial premises.', features: ['Fast-track programmes', 'Tenant fit-out coordination', 'Safety-first sites'] },
+  { slug: 'renovations-remodelling', title: 'Renovations & Remodelling', icon: '', image: '/img/con4.jpeg', short: 'Breathe new life into existing homes and commercial spaces.', features: ['Extensions and conversions', 'Structural alterations', 'Minimal disruption'] },
+  { slug: 'kitchen-interior-fitouts', title: 'Kitchen & Interior Fit-outs', icon: '', image: '/img/kitchen.jpeg', short: 'Built-in cupboards, kitchens, ceilings, tiling and finishes.', features: ['Made-to-measure joinery', 'Granite and quartz tops', 'Ceilings and partitions'] },
+  { slug: 'roofing', title: 'Roofing', icon: '', image: '/img/roofing2.jpeg', short: 'New roofs, re-roofing, waterproofing and repairs.', features: ['IBR, tiles and trusses', 'Leak diagnosis and repair', 'Gutters and insulation'] },
+  { slug: 'plumbing-electrical', title: 'Plumbing & Electrical', icon: '', image: '/img/electric.jpeg', short: 'Certified installations for new builds and upgrades.', features: ['Reticulation and DB boards', 'Solar and backup power ready', 'Compliance certificates'] },
+  { slug: 'civil-road-works', title: 'Civil & Road Works', icon: '', image: '/img/civil-road-works.jpg', short: 'Roads, driveways, drainage, paving and site development.', features: ['Earthworks and grading', 'Stormwater drainage', 'Paving and kerbing'] },
+  { slug: 'project-management', title: 'Project Management', icon: '', image: '/img/solar.jpeg', short: 'Independent oversight of your budget, programme and quality.', features: ['Cost control and reporting', 'Contractor coordination', 'Snagging and handover'] },
+  { slug: 'architectural-design-planning', title: 'Architectural Design & Planning', icon: '', image: '/img/architec.jpg', short: 'Concept sketches to council-ready drawings and BOQs.', features: ['3D concepts', 'Council submissions', 'Bills of quantities'] },
 ];
 
 export interface Project { title: string; category: 'Residential' | 'Commercial' | 'Renovation' | 'Civil'; location: string; year: number; image: string; }

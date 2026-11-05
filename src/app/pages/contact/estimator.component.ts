@@ -25,10 +25,10 @@ import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 })
 export class EstimatorComponent {
   types = [
-    { key: 'new', label: 'New build', rate: 450 },
-    { key: 'reno', label: 'Renovation / extension', rate: 280 },
-    { key: 'fit', label: 'Interior fit-out', rate: 180 },
-    { key: 'roof', label: 'Roofing', rate: 65 },
+    { key: 'new', label: 'New build', rate: 170 },
+    { key: 'reno', label: 'Renovation / extension', rate: 150 },
+    { key: 'fit', label: 'Interior fit-out', rate: 90 },
+    { key: 'roof', label: 'Roofing', rate: 55 },
   ];
   finishes = [
     { key: 'std', label: 'Standard', mult: 1 },
